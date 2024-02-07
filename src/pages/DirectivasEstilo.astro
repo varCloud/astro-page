@@ -4,15 +4,16 @@ import ContainerGeneral from "../components/ContainerGeneral.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
+import NavigationButtons from "../components/NavigationButtons.astro";
 const components = [
     {
         title: "is:global",
-        body: "hace que el contenido de una etiqueta <style> se aplique globalmente en la página cuando el componente es incluido.",
+        body: "hace que el contenido de una etiqueta <style> se aplique globalmente en la página cuando el componente es incluido."
     },
     {
         title: "is:inline",
-        body: "Se renderizará las etiquetas <script> o <style> en el HTML final exactamente donde se crearon",
-    },
+        body: "Se renderizará las etiquetas <script> o <style> en el HTML final exactamente donde se crearon"
+    }
 ];
 ---
 
@@ -34,14 +35,8 @@ const components = [
                     ))
                 }
             </div>
-            <div class="flex md:justify-center items-center mt-5">
-                <a
-                    href="/DirectivasMaquetado"
-                    class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
-                    >Atras</a
-                >
-            </div>
         </ContainerGeneral>
+        <NavigationButtons linkNext="Practica" linkPrev="DirectivasMaquetado"></NavigationButtons>
         <Footer />
     </main>
 </Layout>
