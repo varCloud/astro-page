@@ -1,0 +1,62 @@
+---
+import { slide } from "astro:transitions";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+const components = [
+    {
+        title: "client:load ",
+        body: "Carga e hidrata el JavaScript del componente inmediatamente al cargar la página. <BuyButton client:load />",
+    },
+    {
+        title: "client:idle",
+        body: "Carga e hidrata el componente JavaScript una vez que la página haya terminado con su carga inicial ",
+    },
+    {
+        title: "client:visible",
+        body: "Elementos de la interfaz de usuario de baja prioridad que se encuentran en la parte inferior de la página (“que no son visibles al usuario”) <HeavyImageCarousel client:visible />.",
+    },
+    {
+        title: "client:media",
+        body: "Alternar las barras de navegación u otros elementos que solo deben mostrarse en ciertos tamaños de pantalla. <SidebarToggle client:media='(max-width: 50em)' />",
+    },
+];
+---
+
+<Layout title="Welcome to Directivas de maquetado.">
+    <main transition:animate={slide({ duration: '0.9s' })}>
+        <Header title="Directivas de maquetado." />
+        <div class="d-flex px-10 max-w-6xl m-auto text-white">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-2xl">
+                {
+                    components.map((item, index) => (
+                        <div class="block  p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            <h5
+                                class="mb-2 text-2xl font-bold tracking-tight  "
+                            >
+                                {item.title}
+                            </h5>
+                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                {item.body}
+                            </p>
+                        </div>
+                    ))
+                }
+            </div>
+            <div class="flex md:justify-center items-center mt-5">
+                <a
+                    href="/Islas"
+                    class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                    >Atras</a
+                >
+
+                <a
+                    href="/DirectivasEstilo"
+                    class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                    >Siguiente</a
+                >
+            </div>
+        </div>
+        <Footer />
+    </main>
+</Layout>

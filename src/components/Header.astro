@@ -1,0 +1,15 @@
+---
+interface Props {
+    title: string;
+}
+const { title } = Astro.props;
+console.log(title)
+---
+
+<div class="flex justify-center w-full text-center items-center py-16 text-5xl">
+    <img
+        src="https://astro.build/assets/press/astro-icon-light-gradient.svg"
+        alt=""
+    />
+    <span class="text-green-700 px-4 py-4 text-5xl">{title}</span>
+</div>

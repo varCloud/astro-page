@@ -1,0 +1,60 @@
+---
+import { slide } from "astro:transitions";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Islas.">
+    <main transition:animate={slide({ duration: "0.9s" })}>
+        <Header title="Astro Islas" />
+        <div
+            class="d-flex px-10 max-w-6xl m-auto text-gray-700 dark:text-gray-400"
+        >
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-2xl">
+                <div>
+                    <p>
+                        La arquitectura de islas da como resultado un mejor
+                        rendimiento del frontend al ayudarte a evitar patrones
+                        monolíticos de JavaScript y eliminar automáticamente
+                        todo el JavaScript no esencial de la página.
+                    </p>
+                </div>
+                <!-- ... -->
+                <div>
+                    <p>¿Qué es una isla?</p>
+                    <p>
+                        Una “isla” se refiere a cualquier componente de UI
+                        interactivo en la página. una isla como un widget
+                        interactivo flotando en un mar de HTML estático y ligero
+                        renderizado en el servidor.
+                    </p>
+                    <p>
+                        Beneficios de utilizar islas
+                        <ul>
+                            <li>
+                                La mayor parte de tu sitio web se convierte a
+                                HTML rápido y estático
+                            </li>
+                            <li>Carga en paralelo</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="flex md:justify-center items-center mt-5">
+                <a
+                    href="/Componentes"
+                    class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                    >Atras</a
+                >
+
+                <a
+                    href="/DirectivasMaquetado"
+                    class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                    >Siguiente</a
+                >
+            </div>
+        </div>
+        <Footer />
+    </main>
+</Layout>

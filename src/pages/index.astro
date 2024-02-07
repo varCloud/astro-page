@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Introduccion from '../components/Introduccion.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { fade, slide } from 'astro:transitions';
+---
+
+<Layout title="Welcome to Astro.">
+	<main transition:animate={slide({ duration: '0.9s' })}>
+		<Header title="Astro"></Header>
+		<Introduccion />
+		<Footer />
+	</main>
+</Layout>

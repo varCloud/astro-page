@@ -1,0 +1,45 @@
+---
+import Carousel from "./Carousel.astro";
+---
+
+<script>
+    function handleClick() {
+        console.log("¡botón pulsado!");
+    }
+    document.getElementById("nextIntro").addEventListener("click", handleClick);
+</script>
+
+<div class="d-flex px-10 max-w-6xl m-auto">
+    <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-4 text-2xl text-gray-700 dark:text-gray-400"
+    >
+        <div>
+            <p>
+                Es el framework web para construir sitios web orientados al
+                contenido, como blogs, marketing y comercio electrónico. Astro
+                es conocido por ser pionero en una nueva arquitectura frontend
+                para reducir la sobrecarga y complejidad de JavaScript en
+                comparación con otros frameworks. Si necesitas un sitio web que
+                cargue rápidamente y tenga un excelente SEO, entonces Astro es
+                para ti.
+            </p>
+        </div>
+
+        <div>
+            <p>
+                A pesar de su pequeño tamaño, Astro viene con potentes
+                herramientas que aumentan drásticamente la flexibilidad de tu
+                sitio, ahorrándote horas en la gestión de contenidos. Además,
+                ofrece a los desarrolladores la opción de trabajar con sus
+                frameworks preferidos
+            </p>
+        </div>
+    </div>
+    <div class="flex md:justify-center items-center mt-5">
+        <a
+            href="/Componentes"
+            class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+            >Siguiente</a
+        >
+    </div>
+</div>
