@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import NavigationButtons from "../components/NavigationButtons.astro";
+
 const components = [
     {
         title: "is:global",
@@ -20,12 +21,12 @@ const components = [
 <Layout title="Welcome to Directivas.">
     <main transition:animate={slide({ duration: '0.9s' })}>
         <Header title="Directivas de estilo." />
-        <ContainerGeneral>
+         <ContainerGeneral>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-2xl">
                 {
                     components.map((item, index) => (
-                        <div class="block  p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                            <h5 class="mb-2 text-2xl font-bold tracking-tight  ">
+                        <div class="block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight">
                                 {item.title}
                             </h5>
                             <p class="font-normal text-gray-700 dark:text-gray-400">
@@ -36,7 +37,7 @@ const components = [
                 }
             </div>
         </ContainerGeneral>
-        <NavigationButtons linkNext="Practica" linkPrev="DirectivasMaquetado"></NavigationButtons>
+        <NavigationButtons linkNext="Practica" linkPrev="DirectivasMaquetado"></NavigationButtons> 
         <Footer />
-    </main>
+    </main> 
 </Layout>
